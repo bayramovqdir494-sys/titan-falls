@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<link rel="icon" href="data:,"><title>Titan Falls</title><link rel="stylesheet" href="style.css">
+<script src="https://sdk.crazygames.com/crazygames-sdk-v3.js"></script>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.min.js","three/addons/":"./vendor/jsm/"}}</script>
+</head><body>
+<canvas id="c"></canvas>
+<div id="vignette"></div><div id="flash"></div>
+<div id="hud" class="hide">
+  <div id="hpwrap"><div class="lbl">ARMOR</div><div class="bar"><i id="hp"></i></div><div class="bar small"><i id="fuel"></i></div></div>
+  <div id="wave">WAVE 1</div><div id="enemies"></div>
+  <div id="bosswrap" class="hide"><div class="lbl">TITAN</div><div class="bar boss"><i id="bosshp"></i></div></div>
+  <div id="topr"><button id="mute" class="ib">🔊</button><button id="pause" class="ib">II</button></div>
+  <div id="scrap">⬢ 0</div>
+  <div id="msg"></div><div id="finish">FINISHER!</div>
+  <div id="crosshair"></div>
+</div>
+<div id="touch" class="hide">
+  <div id="stick"><div id="knob"></div></div>
+  <button class="tb" id="bPunch">PUNCH</button><button class="tb" id="bFire">FIRE</button>
+  <button class="tb" id="bDash">DASH</button><button class="tb" id="bJet">JET</button>
+</div>
+<div id="screen">
+  <div id="title" class="panel">
+    <h1>TITAN <span>FALLS</span></h1><p class="sub">The city is falling. Hold the line.</p>
+    <button id="play" class="big" disabled>LOADING…</button>
+    <button id="hangarBtn" class="mid">HANGAR</button>
+    <p id="best"></p>
+    <p class="help" id="helpDesk">WASD move · Mouse aim · LMB punch · RMB fire · SHIFT dash · SPACE jets · ESC pause</p>
+  </div>
+  <div id="hangar" class="panel hide">
+    <h2 id="hangTitle">HANGAR</h2><div id="hscrap"></div><div id="ups"></div>
+    <div class="row"><button id="hangBack" class="mid">BACK</button><button id="nextWave" class="big hide">NEXT WAVE ▶</button></div>
+  </div>
+  <div id="dead" class="panel hide">
+    <h2>MECH DESTROYED</h2><p id="deadInfo"></p>
+    <button id="revive" class="big">▶ REVIVE (AD)</button>
+    <button id="double" class="mid">⬢ x2 SCRAP (AD)</button>
+    <button id="collect" class="mid">CONTINUE</button>
+  </div>
+  <div id="paused" class="panel hide"><h2>PAUSED</h2><button id="resume" class="big">RESUME</button><button id="quit" class="mid">QUIT RUN</button></div>
+</div>
+<script type="module" src="js/main.js"></script>
+</body></html>
